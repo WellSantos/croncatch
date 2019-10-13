@@ -1,0 +1,2 @@
+* 19 * * * /bin/run_me_sixty_times
+45 * * * * /bin/run_me_hourly
