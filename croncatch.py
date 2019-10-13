@@ -12,7 +12,7 @@ for job in cron:
     today = datetime.datetime.now()
     hoje = today.strftime('%Y-%m-%d %H:%M:%S')
     print "Job: ",job
-    print "Proximo: ",proximo
+    print "Next Run: ",proximo
     print "Proximo(tipo): ",(type(proximo))
     print "Hoje: ",hoje
     print "Today: ",today

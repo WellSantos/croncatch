@@ -1,13 +1,20 @@
-from datetime import datetime
+import datetime
+def ObtainDate():
+    isValid=False
+    while not isValid:
+        userIn = raw_input("Type time: HH:MM ")
+        try: # strptime throws an exception if the input doesn't match the pattern
+            d = datetime.datetime.strptime(userIn, "%H:%M")
+            isValid=True
+            print d
+            print(type(d))
+        except:
+            print "Type HH::MM time format!\n"
+    return d
+#test the function
+print ObtainDate()
 
-data_em_texto = raw_input("data: ") #'16:10'
-data = str(data_em_texto)
-data_e_hora = datetime.strptime(data_em_texto, '%H:%M')
-
-print "data em texto: ",data_em_texto
-print (type(data_em_texto))
-print "data: ",data
-print (type(data))
-print "data e hora: ",data_e_hora
-print (type(data_e_hora))
-
+today = datetime.datetime.today()
+tomorow = today + datetime.timedelta(days = 1)
+print "Hoje: ",today
+print "Amanha: ",tomorow
