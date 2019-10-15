@@ -9,15 +9,18 @@ Needed:
 To use, you have to run the command bellow to install dependencies:
 
 As root
-# pip install -r requirements.txt
+`<addr>`pip install -r requirements.txt
 
 As sudo user
-$ sudo python -m pip install -r requirements.txt
+`<addr>`sudo python -m pip install -r requirements.txt
 
 After dependencies installed, run the command to use Croncath
 
-python croncatch.py
+`<addr>`$ python croncatch.py
 
 It will ask for a time, as bellow:
-$ python croncatch.py 
+
+`<addr>`$ python croncatch.py 
 Type "HH:MM" time format:
+
+Will shown the example output
