@@ -12,7 +12,7 @@ To use, you have to run the command bellow to install dependencies:
 `pip install -r requirements.txt`
 
 
-After dependencies installed, run the command to use Croncath
+After dependencies installed, run the command to use Croncatch
 
 `$ python croncatch.py`
 
