@@ -5,19 +5,25 @@ from crontab import CronTab
 
 
 cron = CronTab(tabfile='schedule.tab')
-date_time = raw_input("Type \"HH:MM\" time format: ")
-dt1 = datetime.datetime.today()
-dt2 = dt1
-dt3 = str(dt2)
-date_full = dt3.split(' ')[0] + " " + date_time
 
-
-def convert(date_time): 
-    format = '%Y-%m-%d %H:%M'
-    datetime_str = datetime.datetime.strptime(date_full, format) 
-    return datetime_str 
+def convert_time():
+    valid=False
+    while not valid:
+        date_time = raw_input("Type \"HH:MM\" time format: ")
+        try:
+            dt1 = datetime.datetime.today()
+            dt2 = dt1
+            dt3 = str(dt2)
+            date_full = dt3.split(' ')[0] + " " + date_time
+            format = '%Y-%m-%d %H:%M'
+            datetime_str = datetime.datetime.strptime(date_full, format) 
+            return datetime_str 
+            valid=True
+        except:
+            print "Please, Type HH::MM time format!\n"
+    return datetime_str
     
-user_input = (convert(date_time)) 
+user_input = convert_time() 
 
 print "-----------------------------------------"
 for job in cron:

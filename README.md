@@ -8,13 +8,12 @@ Needed:
 
 To use, you have to run the command bellow to install dependencies:
 
-As root
+
 `pip install -r requirements.txt`
 
-As sudo user
-`sudo python -m pip install -r requirements.txt`
 
 After dependencies installed, run the command to use Croncath
+
 `$ python croncatch.py`
 
 
